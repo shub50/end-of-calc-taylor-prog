@@ -57,12 +57,24 @@ for i in range(0,order+1):
     derivs.append(fval)
 
 f = 0 
+fn = []
 for i in range(0,len(derivs)):
     f = derivs[i][1000]
-print(len(derivs))
+    fn.append(f)
+fi = 0
+d=0
+ci = []
+for i in range(0,len(fn)):
+    l = fn[i]/(math.factorial(i))
+    ci.append(f)
 
+tl = []
+for i in range(0,len(fn)):
+    tl = str("(x-")+str(center)+str(")**")+str(i)
 """
-
+    fi = str("f")+str(i)+str(": ")
+    fl = str(fi)+str(l)
+    
 #calculates values of each order's taylor coeffecient using consecutive derivatives at the center and the factorial denominator 
 I0 = fval[1000]/1
 I1 = onederiv[1000]/1
