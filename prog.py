@@ -113,6 +113,20 @@ print(str("C8: ")+str(C8))
 print(str("C9: ")+str(C9))
 print(str("C10: ")+str(C10))
 
+tl = []
+for i in range(0,len(fn)):
+    tlv = str("(x-")+str(center)+str(")**")+str(i)
+    tl.append(tlv)
+
+tlval = str(" ")
+for i in range(0,len(tl)):
+    tfin = str(tl[i]) + tlval 
+    if len(tl) != 1 and i != len(tl)-1:
+        tfin = tfin + str("+")
+    tlval = str(tl[i])
+print(tfin)
+
+
 #calculates value of estimation with Taylor's formula
 fvalue = I0*((value-center)**0)+I1*((value-center)**1)+I2*((value-center)**2)+I3*((value-center)**3)+I4*((value-center)**4)+I5*((value-center)**5)+I6*((value-center)**6)+I7*((value-center)**7)+I8*((value-center)**8)+I9*((value-center)**9)+I10*((value-center)**10)
 
