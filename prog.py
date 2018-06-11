@@ -1,4 +1,6 @@
 #program used for estimating value of function using any order taylor polynomial
+#note that if consecutive derivatives of f(x) reach 0 before the tenth derivative the estimation may contain large amounts of eror due to limitations of numerical differentiation
+
 import math
 
 if __name__ == '__main__':
@@ -51,8 +53,6 @@ for i in range(0,order):
         valfval = (derivs[n-1][i+1]-derivs[n-1][i])/deltx
         fval.append(valfval)
     n = n+1
-    if fval[1000] == 0:
-        break
     derivs.append(fval)
 
 f = 0 
