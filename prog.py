@@ -1,5 +1,4 @@
-#program used for estimating value of function using tenth order taylor polynomial
-#note that if consecutive derivatives of f(x) reach 0 before the tenth derivative the estimation may contain large amounts of eror due to limitations of numerical differentiation
+#program used for estimating value of function using any order taylor polynomial
 import math
 
 if __name__ == '__main__':
@@ -82,7 +81,7 @@ for i in range(0,len(fn)):
     else:
         eq = str(eq) + str(tl[i])
 
-print(eq)
+print(str("Taylor series of order ")+str(order)+str(": ")+str(eq))
 
 fvalue = []
 for i in range(0,len(fn)):
